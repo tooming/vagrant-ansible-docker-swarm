@@ -3,7 +3,7 @@
   ansible_groups:
     - 'docker-nodes'
     - 'docker-swarm-managers'
-  box: 'mrlesmithjr/xenial64'
+  box: 'ubuntu/xenial64'
   desktop: false
   # disks:
   #   - size: 10
@@ -30,7 +30,7 @@
   ansible_groups:
     - 'docker-nodes'
     - 'docker-swarm-managers'
-  box: 'mrlesmithjr/xenial64'
+  box: 'ubuntu/xenial64'
   desktop: false
   # disks:
   #   - size: 10
@@ -57,7 +57,7 @@
   ansible_groups:
     - 'docker-nodes'
     - 'docker-swarm-managers'
-  box: 'mrlesmithjr/xenial64'
+  box: 'ubuntu/xenial64'
   desktop: false
   # disks:
   #   - size: 10
@@ -84,7 +84,7 @@
   ansible_groups:
     - 'docker-nodes'
     - 'docker-swarm-workers'
-  box: 'mrlesmithjr/xenial64'
+  box: 'ubuntu/xenial64'
   desktop: false
   # disks:
   #   - size: 10
@@ -111,7 +111,7 @@
   ansible_groups:
     - 'docker-nodes'
     - 'docker-swarm-workers'
-  box: 'mrlesmithjr/xenial64'
+  box: 'ubuntu/xenial64'
   desktop: false
   # disks:
   #   - size: 10
@@ -138,7 +138,7 @@
   ansible_groups:
     - 'docker-nodes'
     - 'docker-swarm-workers'
-  box: 'mrlesmithjr/xenial64'
+  box: 'ubuntu/xenial64'
   desktop: false
   # disks:
   #   - size: 10
@@ -165,7 +165,7 @@
   ansible_groups:
     - 'docker-nodes'
     - 'docker-swarm-workers'
-  box: 'mrlesmithjr/xenial64'
+  box: 'ubuntu/xenial64'
   desktop: false
   # disks:
   #   - size: 10

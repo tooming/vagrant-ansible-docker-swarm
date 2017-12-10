@@ -24,7 +24,7 @@ docker_config_alt_data_dir: false
 docker_config_service: false
 
 # Defines if users defined in docker_users should be added to docker group
-docker_config_users: false
+docker_config_users: true
 
 # Defines docker images to be installed
 docker_images: []
@@ -165,7 +165,7 @@ docker_ubuntu_repo_info:
   url: 'https://download.docker.com/linux/ubuntu/gpg'
 
 # Defines users to be added to docker group to allow non sudo access to docker
-docker_users: []
+docker_users: ['ubuntu']
   # - 'vagrant'
 
 # Define Docker version to install
