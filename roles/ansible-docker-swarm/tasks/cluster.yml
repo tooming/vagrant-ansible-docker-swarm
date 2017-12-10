@@ -86,3 +86,23 @@
         inventory_hostname in groups[docker_swarm_workers_ansible_group] and
         'Swarm: active' not in docker_info.stdout and
         'Swarm: pending' not in docker_info.stdout
+
+- name: cluster | Clone OpenFaaS repo
+  git:
+    repo: 'https://github.com/openfaas/faas'
+    dest: /tmp/openfaas
+    version: 0.6.5
+  when: >
+        inventory_hostname == docker_swarm_primary_manager
+  tags:
+    - openfaas
+
+- name: cluster | Deploy OpenFaaS stack
+  shell: ./deploy_stack.sh
+  args:
+    chdir: /tmp/openfaas
+  become: true
+  when: >
+        inventory_hostname == docker_swarm_primary_manager
+  tags:
+    - openfaas

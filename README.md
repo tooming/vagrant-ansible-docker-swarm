@@ -55,7 +55,7 @@ vagrant ssh node0
 Validate that the [Docker](https://www.docker.com) Swarm cluster is functional:
 
 ```bash
-sudo docker node ls
+docker node ls
 ```
 
 You should something similar to below:
@@ -74,13 +74,13 @@ cwnkijv7f8gzsvwltnomgmmea    node1     Ready   Active        Reachable
 Create a new [Docker](https://www.docker.com) service:
 
 ```bash
-sudo docker service create --name web --publish 8080:80 --replicas 1 mrlesmithjr/nginx
+docker service create --name web --publish 8080:80 --replicas 1 mrlesmithjr/nginx
 ```
 
 List the current [Docker](https://www.docker.com) services:
 
 ```bash
-sudo docker service ls
+docker service ls
 ...
 ID            NAME  REPLICAS  IMAGE              COMMAND
 016psrb2tb7y  web   1/1       mrlesmithjr/nginx
@@ -89,7 +89,7 @@ ID            NAME  REPLICAS  IMAGE              COMMAND
 List the tasks of a service:
 
 ```bash
-sudo docker service ps web
+docker service ps web
 ...
 ID                         NAME   IMAGE              NODE   DESIRED STATE  CURRENT STATE               ERROR
 9n3yq6k2ig71kkldzrs2zfqb3  web.1  mrlesmithjr/nginx  node0  Running        Running about a minute ago
@@ -98,7 +98,7 @@ ID                         NAME   IMAGE              NODE   DESIRED STATE  CURRE
 Scale the service to increase the number of replicas:
 
 ```bash
-sudo docker service scale web=4
+docker service scale web=4
 ...
 web scaled to 4
 ```
@@ -106,7 +106,7 @@ web scaled to 4
 Now list the current [Docker](https://www.docker.com) services:
 
 ```bash
-sudo docker service ls
+docker service ls
 ...
 ID            NAME  REPLICAS  IMAGE              COMMAND
 016psrb2tb7y  web   4/4       mrlesmithjr/nginx
@@ -115,7 +115,7 @@ ID            NAME  REPLICAS  IMAGE              COMMAND
 Now list the tasks of the service:
 
 ```bash
-sudo docker service ps web
+docker service ps web
 ...
 ID                         NAME   IMAGE              NODE   DESIRED STATE  CURRENT STATE           ERROR
 9n3yq6k2ig71kkldzrs2zfqb3  web.1  mrlesmithjr/nginx  node0  Running        Running 5 minutes ago
