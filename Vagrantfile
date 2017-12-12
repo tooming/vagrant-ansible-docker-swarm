@@ -73,7 +73,7 @@ Vagrant.configure(2) do |config|
         end
       end
       node.vm.box = node_id['box']
-      node.vm.hostname = node_id['name']
+      node.vm.hostname = "faas.dev"
       node.vm.provider 'virtualbox' do |vb|
         vb.memory = node_id['mem']
         vb.cpus = node_id['vcpu']
